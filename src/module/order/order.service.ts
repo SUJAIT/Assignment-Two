@@ -10,7 +10,7 @@ const createOrder = async (input: IOrder) => {
     //check exists
     const existingProduct = await Book.findById(product);
     if (!existingProduct) {
-        throw new Error('Products Not Found')
+        throw new Error('Products not Found')
     }
     //check stock
     if (existingProduct.quantity < quantity) {
