@@ -14,7 +14,7 @@ const createOrder = async (input: IOrder) => {
     }
     //check stock
     if (existingProduct.quantity < quantity) {
-        throw new Error("No Stock")
+        throw new Error("No Stock Avilable")
     }
     //check ziro quantity
     if (quantity <= 0 ){
