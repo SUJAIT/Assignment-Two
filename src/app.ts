@@ -1,5 +1,4 @@
 import express, { Request, Response } from "express"
-import userRouter from "./module/user/user.router";
 import BookRouter from "./module/book/book.route";
 import orderRouter from "./module/order/order.router";
 
@@ -10,7 +9,7 @@ const app = express();
 //middleware ata use route k bola dai ja jeson data dila ta resived koro..
 app.use(express.json())
 
-app.use('/api/user',userRouter)
+
 app.use('/api/products',BookRouter)
 app.use('/api/orders',orderRouter)
 
